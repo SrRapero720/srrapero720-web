@@ -26,11 +26,11 @@ app.set("views", path_1.default.join(process.cwd(), "static/views"));
 app.use((0, compression_1.default)({ level: 9 }));
 app.use((0, express_minify_1.default)({ cache: path_1.default.join(process.cwd(), "static/cache") }));
 app.use(express_1.default.static(path_1.default.join(process.cwd(), "static/public")));
+if (process.env.STATIC_PATH)
+    app.use("/node-static", express_1.default.static(path_1.default.join(process.env.STATIC_PATH)));
 app.use(express_1.default.json({ limit: "100mb" }));
 app.use(express_1.default.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express_1.default.text({ limit: "8mb" }));
-if (process.env.STATIC_PATH)
-    app.use("/node-static", express_1.default.static(path_1.default.join(process.env.STATIC_PATH)));
 app.enable("verbose errors");
 app.use(Main_Routes_1.default.getRoutes());
 const net = server.listen(ServerConfig_1.default.PORT, ServerConfig_1.default.ADDRESS, () => {

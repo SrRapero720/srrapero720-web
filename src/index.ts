@@ -33,10 +33,10 @@ app.set("views", path.join(process.cwd(), "static/views"));
 app.use(compression({ level: 9 }));
 app.use(minify({ cache: path.join(process.cwd(), "static/cache")}))
 app.use(express.static(path.join(process.cwd(), "static/public")));
+if (process.env.STATIC_PATH) app.use("/node-static", express.static(path.join(process.env.STATIC_PATH)));
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express.text({ limit: "8mb" }));
-if (process.env.STATIC_PATH) app.use("/node-static", express.static(path.join(process.env.STATIC_PATH)));
 app.enable("verbose errors");
 
 // RUTAS
