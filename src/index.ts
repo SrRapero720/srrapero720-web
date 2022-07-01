@@ -6,6 +6,8 @@ import "sr-console";
 import express from "express";
 import spdy from "spdy";
 import path from "path";
+import compression from "compression";
+import minify from "express-minify";
 
 // CONFIG
 import SpdyConfig from "./config/SpdyConfig";
@@ -28,11 +30,13 @@ const server = spdy.createServer(new SpdyConfig(), app);
 app.set("view engine", "ejs");
 app.set("trust proxy", ['loopback', 'linklocal', 'uniquelocal']);
 app.set("views", path.join(process.cwd(), "static/views"));
+app.use(compression({ level: 9 }));
+app.use(minify({ cache: path.join(process.cwd(), "static/cache")}))
 app.use(express.static(path.join(process.cwd(), "static/public")));
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express.text({ limit: "8mb" }));
-// if (process.env.STATIC_PATH) app.use("node-static", express.static(process.env.STATIC_PATH));
+if (process.env.STATIC_PATH) app.use("node-static", express.static(process.env.STATIC_PATH));
 app.enable("verbose errors");
 
 // RUTAS
