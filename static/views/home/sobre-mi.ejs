@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <title><%= NAME %> | Proyectos</title>
+    <%- include("../meta/index.ejs") %> 
+    <link rel="stylesheet" href="/css/sobre-mi.css">
+</head>
+<body>
+    <%- include("../layout/header.ejs") %>
+    <main>
+        <section class="section-text">
+            <h1>Sobre mi</h1>
+            <p>
+                Soy programador, Animador, Rigger, Modelador (3D), Hacker, Doxxeador. 
+                Tambien estoy aprendiendo a dibujar y estoy estudiando leyes (derecho).
+                No tengo mucha habilidad para hablar con las personas. Tengo mala comedia. <br><br>
+
+                Me encanta el pay de limon :) <br><br>
+
+
+                Acepto comisiones casi siempre de programas, apps, apis, rigs, rendera y animaciones, de lo demas no
+                ya que no es lo ideal.
+            </p>
+
+            <section class="section-picture">
+                <h2>Frisk x Daydreams</h2>
+                <img onclick="imageClick(this)" src="/img/frisk.png" alt="Frisk x Daydreams">
+            </section>
+            <br><br>
+
+            <h2>Como trabajo</h2>
+            <p>
+                Regularmente trabajo solo en proyectos complejos de programacion. Suelo
+                tomarme mi tiempo elaborando codigo para asegurarme que todo este en orden. Por lo que si estimo un tiempo
+                de 1 mes de cualquier proyecto puede demorar hasta 3 meses. Pero todo lo dejo completamente funcional. <br><br>
+
+                En algunos casos puede haber detalles sin posibilidad de solucionar por limitaciones del lenguaje, frameworks, etc.
+            </p>
+            <section class="section-picture">
+                <h2>SrConsole</h2>
+                <img onclick="imageClick(this)" src="/img/vsscreenshot.png" alt="SrConsole">
+            </section>
+            <br><br>
+
+            <h2>Proyectos comisionados</h2>
+            <p>
+                Los proyectos comisionados de programacion tienen un costo elevado por funcion, es decir que si requiere
+                implementar un nuevo menu, rutas a una API, etc. siempre tienen un coste y generalmente mi precio es elevado<br>
+                Sin embargo el mantenimiento (bugs, optimizacion, migracion) no tienen costo. <br><br>
+
+                Los Renders y Rigs tienen un costo fijo dependiendo de las caracteristicas que requiera. 
+                Si requiere scripting puede subir mas el precio dependiendo de que tan complejo sea. Aunque no suele ser necesario<br><br>
+                
+                Las animaciones cortas (no mas de 1 minuto) las trabajo siempre totalmente solo ya que la corta duracion con un equipo extenso puede
+                entorpecer el desarrollo de esta. No importa el cambio realizarlo tiene el mismo costo de la animacion completa.
+            </p>
+            <section class="section-picture">
+                <h2>Clover</h2>
+                <video controls src="/video/still-love.mp4"></video>
+            </section>
+            <br><br>
+            <h2>¿Con que esta hecha esta web?</h2>
+            <p>
+                Este sitio web esta desarrollado con Node.js (Typescript) con Express, Spdy, EJS y SrConsole
+            </p>
+        </section>
+    </main>
+    <%- include('../layout/footer.ejs') %>
+</body>
+</html>

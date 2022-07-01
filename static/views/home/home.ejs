@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <%- include("../meta/index.ejs") %> 
+    <title><%= NAME %> | Inicio</title>
+    <script src="/js/home.js"></script>
+</head>
+<body>
+    <%- include("../layout/header.ejs") %> 
+    <main class="main">
+        <div class="welcome-image">
+            <span class="welcome-title" id="welcome-title">No soy un antisistema, ¡YO SOY EL SISTEMA!</span>
+        </div>
+        <section class="section-basic">
+            <img src="/favicon.ico" alt="favicon">
+            <div>
+                <h2>SrRapero720</h2>
+                <p>
+                    Fundador de ReplicatedStudios y VoxelatedHost
+                    Programo con JS/TS, Java, Python, C# // Node.js, Android, EJS // MongoDB, MySQL<br>
+                    Animador, Rigger y Modelador 3D // C4D y Maya. <br>
+                    Hacker etico y Doxxeador especializado (no hay titulos para eso). Aprendiendo a dibujar y a animar en 2D.
+                    Sistema universal y proximo presidente de Mexico.
+                </p>
+            </div>
+        </section>
+        <section class="section-picture">
+            <h2>Trabajo mas Reciente</h2>
+            <img onclick="imageClick(this)" src="/img/axol.png" alt="Axol Girld, Caprimint">
+        </section>
+        <section class="section-basic">
+            <div style="width: 90%; max-width: 1000px; margin: auto">
+                <h2>Redes sociales</h2>
+                <p>
+                    Normalmente uso las redes sociales para publicar cosas en ROL de "EL SISTEMA" o para publicar cosas poco o nada profesionales, 
+                    pero tambien las uso para comunicarme con cualquiera que quiera contactar de manera profesional o anormalmente. <br><br>
+                    No intenten funarme por cosas extraideas de: Twitter. Ya que puede carecer de contexto originado en Discord.
+                </p>
+                <div class="buttons">
+                    <a href="https://www.facebook.com/SrRapero720" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.youtube.com/channel/UCoES3pz00CvO9r9WoruEKfA" target="_blank" rel="noopener noreferrer">Youtube</a>
+                    <a href="https://www.twitch.tv/srrapero720" target="_blank" rel="noopener noreferrer">Twitch</a>
+                    <a href="https://discord.gg/dSNSdnKetd" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+            </div>
+            <a class="twitter-timeline" data-lang="es" data-width="600" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/SrRapero720?ref_src=twsrc%5Etfw">Tweets by SrRapero720</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </section>
+    </main>
+
+    <%- include('../layout/footer.ejs') %>
+</body>
+</html>

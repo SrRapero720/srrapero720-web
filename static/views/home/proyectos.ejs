@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <title><%= NAME %> | Proyectos</title>
+    <%- include("../meta/index.ejs") %> 
+    <link rel="stylesheet" href="/css/proyectos.css">
+</head>
+<body>
+    <%- include("../layout/header.ejs") %>
+    <main>
+        <section class="section-text">
+            <h1>Proyectos realizados por Mi</h1>
+            <p>Si deseas interesado en contratarme y no sabes como trabajo, conoce los trabajos propios y de terceros
+                realizados por mi en su mayoria. Dependiendo del proyecto puede seguirlo o consultarlo
+            </p>
+        </section>
+        <section class="card-list">
+            <div class="card-proyect">
+                <div class="card-content">
+                    <img src="/img/toleflix.png" alt="toleflix logo">
+                    <div>
+                        <h2>Toleflix TV</h2>
+                        <p>¿Arto de pagar suscripciones? ¿Quieres ver peliculas sin limitaciones? Puedes ver un amplio catalogo de peliculas desde
+                            esta app disponible para Android y Android TV.
+                        </p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a class="left right" href="http://app.toleflix.ga/download" target="_blank" rel="noopener noreferrer">Descargar</a>
+                </div>
+            </div>
+            <div class="card-proyect">
+                <div class="card-content">
+                    <img src="/img/rs.png" alt="Replicated Studios">
+                    <div>
+                        <h2>Replicated Studios</h2>
+                        <p>Estudio de animacion y dibujo. Imitando el estilo japones para la elaboracion de mangas. Conoce los proyectos manga
+                            mas destacados como Insomnia, Eyes on Love y una serie de animacion estilo cubico DiamondCity.
+                        </p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a class="left" href="https://replicatedstudios.com" target="_blank" rel="noopener noreferrer">Sitio web</a>
+                    <a href="https://twitter.com/ReplicatedStd" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    <a href="https://www.youtube.com/c/ReplicatedStudios" target="_blank" rel="noopener noreferrer">Youtube</a>
+                    <a class="right" href="https://discord.gg/dSNSdnKetd" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+            </div>
+
+            <div class="card-proyect">
+                <div class="card-content">
+                    <img src="/img/odc.png" alt="ORDEN DEL CUBO">
+                    <div>
+                        <h2>OrdenDelCubo</h2>
+                        <p>"sin mas informacion"</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a class="left" href="http://ordendelcubo.com" target="_blank" rel="noopener noreferrer">Sitio web</a>
+                    <a href="http://app.toleflix.ga" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    <a class="right" href="http://app.toleflix.ga" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('../layout/footer.ejs') %>
+</body>
+</html>

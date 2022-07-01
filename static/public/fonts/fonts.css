@@ -1,0 +1,23 @@
+@font-face {
+    font-family: dafoe;
+    src: url("/fonts/dafoe.ttf");
+}
+
+@font-face {
+    font-family: advent;
+    src: url("/fonts/advent.ttf");
+}
+
+@font-face {
+    font-family: metro;
+    src: url("/fonts/metro.ttf");
+}
+
+@font-face {
+    font-family: kelly;
+    src: url("/fonts/kelly.ttf");
+}
+
+P {
+    font-family: metro;
+}
