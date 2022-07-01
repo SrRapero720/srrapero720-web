@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "build/index.js",
   "scripts": {
-    "install": "npm i && npm i -D",
+    "install:all": "npm i && npm i -D",
     "start:build": "tsc && node ./build/index.js",
     "start:watch": "nodemon -e ts --exec \"ts-node src\\index.ts\"",
     "prepare": "echo CANNOT PREPARE && exit 0",
