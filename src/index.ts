@@ -36,7 +36,7 @@ app.use(express.static(path.join(process.cwd(), "static/public")));
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express.text({ limit: "8mb" }));
-if (process.env.STATIC_PATH) app.use("node-static", express.static(path.join(process.env.STATIC_PATH)));
+if (process.env.STATIC_PATH) app.use("/node-static", express.static(path.join(process.env.STATIC_PATH)));
 app.enable("verbose errors");
 
 // RUTAS
