@@ -18,6 +18,18 @@
     src: url("/fonts/kelly.ttf");
 }
 
+@font-face {
+    font-family: apro;
+    src: url("/fonts/apro.ttf");
+}
+
 P {
     font-family: metro;
+}
+
+span.error {
+    font-family: apro;
+    background-color: var(--color-items);
+    border-radius: 12px;
+    padding: 12px;
 }

@@ -18,6 +18,7 @@ import StartBuilder from "./models/core/StartBuilder";
 
 // RUTAS
 import MainRoutes from "./routes/Main.Routes";
+import ErrRoutes from "./routes/Err.Routes";
 
 // STATUS TASK
 if (Patch.status()) console.info("Modulos parchados"); else console.err("No se pudo parchar el modulo");
@@ -41,6 +42,7 @@ app.enable("verbose errors");
 
 // RUTAS
 app.use(MainRoutes.getRoutes());
+app.use(ErrRoutes.getRoutes())
 
 const net = server.listen(ServerConfig.PORT, ServerConfig.ADDRESS, () => {
     console.success(new StartBuilder(net.address()));

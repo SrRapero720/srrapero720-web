@@ -27,6 +27,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 56px;
 }
 
+span.error {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
 .header {
     color: var(--color-text);
     position: fixed;
@@ -39,8 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-    padding-top: 86px;
-
+    padding-top: 105px;
 }
 
 .nav {

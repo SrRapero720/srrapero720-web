@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <%- include("../meta/index.ejs") %> 
+    <title><%= NAME %> | 404</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("/img/500.gif");
+            background-position: center;
+            background-size: cover;
+            align-content: center;
+            overflow: hidden;
+        }
+
+        .header { padding: 16px; }
+        .nav { display: none; }
+        .main {
+            display: flex;
+            height: 100%;
+            padding-top: 0;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section.error {
+            width: fit-content;
+            margin: auto;
+            padding: 32px;
+            backdrop-filter: brightness(100%) blur(10px);
+            font-size: 30px;
+            border-radius: 16px;
+            border: 2px solid var(--color-secondary);
+        }
+
+        section.error p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../layout/header.ejs") %> 
+    <main class="main">
+        <section class="error">
+            <h1>Error 404</h1>
+            <p>No se encontro lo que buscabas. Intenta mas tarde</p>
+            <div class="buttons">
+                <a href="/">Inicio</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
