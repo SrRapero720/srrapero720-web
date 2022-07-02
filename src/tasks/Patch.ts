@@ -4,7 +4,7 @@ import fs from "fs";
 
 //DIRS
 const node_modules = path.join(process.cwd(), '/node_modules');
-const dump = path.join(__dirname, "./dump");
+const dump = path.join(process.cwd(), "/static/dump");
 let status = false;
 
 // FILES

@@ -104,7 +104,7 @@
   },
   "include": [
     "./src"
-  ], 
+, "static/dump"  ], 
   "exclude": [
     "./node_modules"
   ]
