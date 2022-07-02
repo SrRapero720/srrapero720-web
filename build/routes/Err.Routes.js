@@ -18,7 +18,7 @@ function formatObject(req, res, next, err) {
 app.use((req, res, next) => res.status(404).format(formatObject(req, res, next)));
 app.use((err, req, res, next) => res.status(500).format(formatObject(req, res, next, err)));
 class ErrRoutes {
-    static getRoutes() { return app; }
+    static getRoutes() { console.warn(this.name, "| Implementado"); return app; }
 }
 exports.default = ErrRoutes;
 ;

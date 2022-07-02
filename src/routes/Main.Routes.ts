@@ -8,4 +8,4 @@ app.get("/portafolio", async (req: Request, res: Response) => res.status(200).re
 app.get("/sobre-mi", async (req: Request, res: Response) => res.status(200).render("home/sobre-mi.ejs", new SiteConfig(req.url, req.path)));
 app.get("/500", async (req: Request, res: Response) => res.status(200).render("error/500.ejs", new SiteConfig(req.url, req.path, new Error("No se encontro ningun error, asi que generamos uno"))))
 
-export default class MainRoutes { public static getRoutes() {return app;} };
+export default class MainRoutes { public static getRoutes() {console.warn(this.name, "| Implementado");return app;} };

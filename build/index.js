@@ -15,6 +15,7 @@ const ServerConfig_1 = __importDefault(require("./config/ServerConfig"));
 const StartBuilder_1 = __importDefault(require("./models/core/StartBuilder"));
 const Main_Routes_1 = __importDefault(require("./routes/Main.Routes"));
 const Err_Routes_1 = __importDefault(require("./routes/Err.Routes"));
+const Api_Routes_1 = __importDefault(require("./routes/Api.Routes"));
 if (Patch_1.default.status())
     console.info("Modulos parchados");
 else
@@ -34,6 +35,7 @@ app.use(express_1.default.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express_1.default.text({ limit: "8mb" }));
 app.enable("verbose errors");
 app.use(Main_Routes_1.default.getRoutes());
+app.use(Api_Routes_1.default.getRoutes());
 app.use(Err_Routes_1.default.getRoutes());
 const net = server.listen(ServerConfig_1.default.PORT, ServerConfig_1.default.ADDRESS, () => {
     console.success(new StartBuilder_1.default(net.address()));

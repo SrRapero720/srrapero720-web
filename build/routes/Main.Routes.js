@@ -12,7 +12,7 @@ app.get("/portafolio", async (req, res) => res.status(200).render("home/portafol
 app.get("/sobre-mi", async (req, res) => res.status(200).render("home/sobre-mi.ejs", new SiteConfig_1.default(req.url, req.path)));
 app.get("/500", async (req, res) => res.status(200).render("error/500.ejs", new SiteConfig_1.default(req.url, req.path, new Error("No se encontro ningun error, asi que generamos uno"))));
 class MainRoutes {
-    static getRoutes() { return app; }
+    static getRoutes() { console.warn(this.name, "| Implementado"); return app; }
 }
 exports.default = MainRoutes;
 ;

@@ -15,4 +15,4 @@ function formatObject(req: Request, res: Response, next: NextFunction, err?: Err
 
 app.use((req: Request, res: Response, next: NextFunction) => res.status(404).format(formatObject(req, res, next)));
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => res.status(500).format(formatObject(req, res, next, err)));
-export default class ErrRoutes { public static getRoutes() {return app;} };
+export default class ErrRoutes { public static getRoutes() {console.warn(this.name, "| Implementado");return app;} };
