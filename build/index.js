@@ -35,7 +35,7 @@ app.use(express_1.default.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express_1.default.text({ limit: "8mb" }));
 app.enable("verbose errors");
 app.use(Main_Routes_1.default.getRoutes());
-app.use(Api_Routes_1.default.getRoutes());
+app.use("/api/v1", Api_Routes_1.default.getRoutes());
 app.use(Err_Routes_1.default.getRoutes());
 const net = server.listen(ServerConfig_1.default.PORT, ServerConfig_1.default.ADDRESS, () => {
     console.success(new StartBuilder_1.default(net.address()));

@@ -43,7 +43,7 @@ app.enable("verbose errors");
 
 // RUTAS
 app.use(MainRoutes.getRoutes());
-app.use(ApiRoutes.getRoutes());
+app.use("/api/v1", ApiRoutes.getRoutes());
 app.use(ErrRoutes.getRoutes());
 
 const net = server.listen(ServerConfig.PORT, ServerConfig.ADDRESS, () => {
